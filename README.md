@@ -81,7 +81,21 @@ git clone https://github.com/aikiesan/lego_rotas.git
 cd lego_rotas
 ```
 
-#### 2. Setup Backend
+#### 2. Configure Environment Variables
+
+```bash
+# Create .env file for Docker Compose
+cp .env.example .env
+
+# Edit .env and set a secure password
+# Replace 'your-secure-password-here' with a strong password
+# You can generate one with: openssl rand -base64 32
+nano .env  # or use your preferred editor
+```
+
+**Important:** Never commit the `.env` file to git. It's already in `.gitignore`.
+
+#### 3. Setup Backend
 
 ```bash
 cd backend
@@ -102,10 +116,10 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-#### 3. Setup Frontend
+#### 4. Setup Frontend
 
 ```bash
-cd ../frontend
+cd frontend
 
 # Install dependencies
 npm install
@@ -114,7 +128,7 @@ npm install
 cp .env.example .env
 ```
 
-#### 4. Start the Application
+#### 5. Start the Application
 
 Open two terminal windows:
 
